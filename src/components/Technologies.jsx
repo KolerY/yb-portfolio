@@ -7,7 +7,7 @@ import { FaAngular } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 const iconVariants = (duration) => ({
     initial: { y: -10 },
