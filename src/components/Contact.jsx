@@ -12,15 +12,20 @@ const Contact = () => {
   } = useForm();
 
   const sendEmail = (data) => {
-    // Use the ref and emailjs to send the email
     emailjs
-      .sendForm('service_mrbzrhb', 'template_d6aq4re', form.current, '-ugTKlHtZCxivEPZd')
+      .sendForm(
+        'service_mrbzrhb',
+        'template_d6aq4re',
+        form.current,
+        '-ugTKlHtZCxivEPZd'
+      )
       .then(
         () => {
-          console.log('SUCCESS!');
+          alert('Message envoyé avec succès!');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          alert('Une erreur est survenue. Veuillez réessayer.');
+          console.error('FAILED...', error.text);
         }
       );
   };
