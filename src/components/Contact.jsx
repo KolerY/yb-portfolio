@@ -34,7 +34,7 @@ const Contact = () => {
                 type="email"
                 id="email"
                 className={`shadow-sm bg-gray-50 border ${errors.email ? 'border-red-500' : 'border-gray-300'
-                  } text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light`}
+                  } text-black text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light`}
                 placeholder="email@xyz.com"
                 {...register('email', {
                   required: 'Email est obligatoire',
