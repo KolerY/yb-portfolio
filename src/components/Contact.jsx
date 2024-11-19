@@ -133,7 +133,7 @@ const Contact = () => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="w-full py-3 px-6 mt-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 focus:outline-none active:scale-95"
+                className="w-full py-3 px-6 mt-4 bg-purple-900 text-white font-bold rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 focus:outline-none active:scale-95"
               >
                 Envoyer le message
               </button>
