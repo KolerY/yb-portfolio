@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 
 const Contact = () => {
   const form = useRef();
+  const [submissionMessage, setSubmissionMessage] = useState("");
 
   const {
     register,
@@ -14,18 +15,20 @@ const Contact = () => {
   const sendEmail = (data) => {
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_KEY, 
+        import.meta.env.VITE_EMAILJS_SERVICE_KEY,
         import.meta.env.VITE_EMAILJS_TEMPLATE_KEY,
         form.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
-          alert('Message envoyé avec succès!');
+          setSubmissionMessage("Votre message a été envoyé avec succès!");
         },
         (error) => {
-          alert('Une erreur est survenue. Veuillez réessayer.');
-          console.error('FAILED...', error.text);
+          setSubmissionMessage(
+            "Une erreur est survenue. Veuillez réessayer plus tard."
+          );
+          console.error("FAILED...", error.text);
         }
       );
   };
@@ -136,6 +139,13 @@ const Contact = () => {
               </button>
             </div>
           </form>
+
+          {/* Submission Message */}
+          {submissionMessage && (
+            <p className="mt-4 text-center text-lg text-green-500 dark:text-green-400">
+              {submissionMessage}
+            </p>
+          )}
         </div>
       </section>
     </div>
