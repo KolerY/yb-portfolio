@@ -2,6 +2,7 @@ import React from 'react'
 import { HERO_CONTENT } from '../constants/index.js'
 import profilePic from '../assets/profile-pic-transparent.png'
 import { motion } from 'framer-motion'
+import resume from '../assets/resume.png'
 
 const container = (delay) => ({
     hidden: { x: -100, opacity: 0 },
@@ -39,6 +40,17 @@ const Hero = () => {
                             className='my-4 max-w-lg py-4 font-light tracking-tight text-center lg:text-left'>
                             {HERO_CONTENT}
                         </motion.p>
+                        <motion.a
+                            variants={container(1.5)}
+                            initial="hidden"
+                            animate="visible"
+                            href={resume}
+                            download="Yannick Blanchette CV"
+                            className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-purple-600 text-purple-600"
+                        >
+                            <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-purple-900 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                            <span class="relative text-purple-600 transition duration-300 group-hover:text-white ease">Curriculum Vitae</span>
+                        </motion.a>
                     </div>
                 </div>
 
@@ -46,7 +58,7 @@ const Hero = () => {
                     <motion.img
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
-                        transition={{duration: 1, delay: 1.2}}
+                        transition={{ duration: 1, delay: 1.2 }}
                         className='rounded-xl w-3/4 sm:w-3/4 lg:w-full' src={profilePic} alt="Yannick Blanchette" />
                 </div>
             </div>
