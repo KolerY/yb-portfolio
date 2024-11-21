@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HERO_CONTENT } from '../constants/index.js'
 import profilePic from '../assets/profile-pic-transparent.png'
 import { motion } from 'framer-motion'
@@ -13,7 +13,35 @@ const container = (delay) => ({
     }
 });
 
+const Modal = ({ isOpen, onClose, resume }) => {
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-4xl"> {/* Larger max width */}
+                <h2 className="text-xl font-bold mb-4">Curriculum Vitae</h2>
+                <img
+                    src={resume}
+                    alt="Resume"
+                    className="mb-4 w-full h-auto max-h-[800px] object-contain" // Increased max height
+                />
+                <button
+                    onClick={onClose}
+                    className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700"
+                >
+                    Close
+                </button>
+            </div>
+        </div>
+    );
+};
+
 const Hero = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className='border-b border-neutral-900 pb-4 lg:mb-35'>
             <div className='flex flex-wrap lg:flex-nowrap items-center'>
@@ -40,19 +68,21 @@ const Hero = () => {
                             className='my-4 max-w-lg py-4 font-light tracking-tight text-center lg:text-left'>
                             {HERO_CONTENT}
                         </motion.p>
-                        <motion.a
+                        <motion.button
                             variants={container(1.5)}
                             initial="hidden"
                             animate="visible"
                             href={resume}
-                            download="Yannick Blanchette CV"
+                            onClick={openModal}
                             className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-purple-600 text-purple-600"
                         >
                             <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-purple-900 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                             <span class="relative text-purple-600 transition duration-300 group-hover:text-white ease">Curriculum Vitae</span>
-                        </motion.a>
+                        </motion.button>
                     </div>
                 </div>
+
+                <Modal isOpen={isModalOpen} onClose={closeModal} resume={resume} />
 
                 <div className='w-full lg:w-1/2 p-6 lg:p-8 flex justify-center lg:justify-end lg:mt-0'>
                     <motion.img
