@@ -18,12 +18,12 @@ const Modal = ({ isOpen, onClose, resume }) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-4xl"> {/* Larger max width */}
+            <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-4xl">
                 <h2 className="text-xl font-bold mb-4">Curriculum Vitae</h2>
                 <img
                     src={resume}
                     alt="Resume"
-                    className="mb-4 w-full h-auto max-h-[800px] object-contain" // Increased max height
+                    className="mb-4 w-full h-auto max-h-[800px] object-contain"
                 />
                 <button
                     onClick={onClose}
