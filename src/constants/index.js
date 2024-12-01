@@ -13,6 +13,7 @@ export const PROJECTS = [
     description:
       "J'ai développé une Progressive Web App (PWA) entièrement responsive pour le site web du EDC Music Festival. La PWA garantit que les utilisateurs peuvent accéder au site même hors ligne, grâce à l'intégration du service worker qui met en cache des éléments comme les images pour une expérience interrompue.",
     technologies: ["HTML", , "CSS", "Javascript", "Tailwind"],
+    github: "https://github.com/KolerY/TP3_BlanchetteYannick",
   },
   {
     title: "Rick and Morty App",
@@ -20,6 +21,7 @@ export const PROJECTS = [
     description:
       "J'ai développé un site en React utilisant l'API de Rick and Morty et React Redux pour la gestion de l'état globale. Les utilisateurs peuvent explorer les personnages, consulter leurs détails et naviguer entre les lieux et épisodes associés. Le tout est stylisé avec Tailwind CSS pour une interface fluide et responsive.",
     technologies: ["HTML", "CSS", "React", "Redux", "Tailwind"],
+    github: "https://github.com/KolerY/RickAndMortyAPI",
   },
   {
     title: "Portfolio Website",
@@ -27,6 +29,7 @@ export const PROJECTS = [
     description:
       "Un site web de portfolio personnel présentant mes projets, compétences et informations de contact.",
     technologies: ["HTML", "CSS", "React", "Tailwind"],
+    github: "https://github.com/KolerY/yb-portfolio",
   },
 ];
 

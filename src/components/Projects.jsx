@@ -1,5 +1,6 @@
 import React from 'react'
 import { PROJECTS } from '../constants'
+import { FaGithub } from "react-icons/fa6";
 
 const Projects = () => {
   return (
@@ -19,6 +20,11 @@ const Projects = () => {
                   {tech}
                 </span>
               ))}
+              <div className='mt-4 flex items-center'>
+                <div className='ml-auto'>
+                  <a href={project.github} target="_blank"><FaGithub className='text-4xl text-white hover:text-neutral-400 transition' /></a>
+                </div>
+              </div>
             </div>
           </div>
         ))}
