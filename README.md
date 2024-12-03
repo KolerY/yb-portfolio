@@ -1,7 +1,7 @@
 # Portfolio Yannick Blanchette
 
 ## Demo link:
-Access my site at https://kolery.github.io/yb-portfolio/
+Access my site at (https://yannickblanchette.netlify.app)
 
 ## Technologies
 I used `React`, `Javascript`,`Tailwind`
