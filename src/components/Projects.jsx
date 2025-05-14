@@ -1,6 +1,7 @@
 import React from 'react'
 import { PROJECTS } from '../constants'
 import { FaGithub } from "react-icons/fa6";
+import { FaGlobe } from "react-icons/fa";
 
 const Projects = () => {
   return (
@@ -21,8 +22,15 @@ const Projects = () => {
                 </span>
               ))}
               <div className='mt-4 flex items-center'>
-                <div className='ml-auto'>
-                  <a href={project.github} target="_blank"><FaGithub className='text-4xl text-white hover:text-neutral-400 transition' /></a>
+                <div className='ml-auto flex gap-4'>
+                  {project.site && (
+                    <a href={project.site} target="_blank" rel="noopener noreferrer">
+                      <FaGlobe className='text-4xl text-white hover:text-neutral-400 transition' />
+                    </a>
+                  )}
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <FaGithub className='text-4xl text-white hover:text-neutral-400 transition' />
+                  </a>
                 </div>
               </div>
             </div>

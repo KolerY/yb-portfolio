@@ -2,12 +2,21 @@ import edc from "../assets/projects/EDC.png";
 import rickmorty from "../assets/projects/Rick_Morty.png";
 import portfolio from "../assets/projects/portfolio.png";
 import grodt from "../assets/projects/grodt.png";
+import supernova from "../assets/projects/supernova.png";
 
 export const HERO_CONTENT = `Je suis un étudiant ,  spécialisé dans la création d'applications web. Tout en étant en pleine formation, j'ai acquis des compétences en JavaScript, React, Vue, Angular, et PHP / MySQL. Mon objectif est de mettre à profit mon apprentissage pour concevoir des solutions qui offrent des expériences utilisateur exceptionnelles.`;
 export const ABOUT_TEXT = `Je suis un ancien joueur professionnel de jeux vidéo, où j'ai appris à relever des défis complexes et à me dépasser constamment. Après avoir passé plusieurs années à développer mes compétences dans cet univers, j'ai décidé de réorienter ma carrière vers un domaine qui me permet de canaliser ma créativité et ma passion pour la technologie : le développement front-end.
                             Je suis actuellement étudiant en développement web à Montréal, où j'acquiers des compétences en utilisant des technologies modernes telles que React, Vue, et Angular. Mon parcours dans le gaming m'a doté d'une grande capacité d'adaptation, de la rigueur et de la persévérance, des qualités que je mets aujourd'hui au service de la programmation. Je suis déterminé à construire des interfaces utilisateur performantes et esthétiques, tout en m'ouvrant aux opportunités dans le monde du développement web.`;
 
 export const PROJECTS = [
+  {
+    title: "Supernova - Site web de gestion pour une compagnie de construction",
+    image: supernova,
+    description: "Supernova est un site web de gestion en cours de développement pour une compagnie de construction. Il permet de gérer les projets, les équipes, les ressources et les coûts.",
+    technologies: ["HTML", "CSS", "React", "TypeScript", "Tailwind", "Node.js", "Nest.js", "MySQL"],
+    github: "PRIVATE",
+    site: "https://supernova-ui.fly.dev/"
+  },
   {
     title: "GRODT - Plateforme de Planification Financière",
     image: grodt,
